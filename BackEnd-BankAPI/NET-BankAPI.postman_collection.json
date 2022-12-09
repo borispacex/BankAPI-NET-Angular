@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "3c92d464-9dee-4b8d-b144-a9264278514a",
+		"name": "NET-BankAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5726533"
+	},
+	"item": [
+		{
+			"name": "GETclientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetClienteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Client/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVEcliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Pedro\",\r\n  \"phoneNumber\": \"00045678\",\r\n  \"email\": \"pedro@test.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5211/api/Client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATEcliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Boris actualizado\",\r\n  \"PhoneNumber\" : \"123123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5211/api/Client/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETEcliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Client/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETcuentas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSm9zZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Impvc2VAdGVzdC5jb20iLCJBZG1pblR5cGUiOiJWaWV3ZXIiLCJleHAiOjE2Njg2MDU3NjR9.On_9J2K16tnrs77N6wQYx2wmhOIX19EmDDor63Zq9LX8WA7FhqmD93gqBJLeOaxm1WfHeiyhKoS73wJ170Kj6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETcuentaById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVEcuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountType\": 2,\r\n    \"clientId\": 2,\r\n    \"balance\": 20000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5211/api/Account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATEcuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"accountType\": 1,\r\n    \"clientId\": 1,\r\n    \"balance\": 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5211/api/Account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETEcuenta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSm9zZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Impvc2VAdGVzdC5jb20iLCJBZG1pblR5cGUiOiJWaWV3ZXIiLCJleHAiOjE2Njg2MDU3NjR9.On_9J2K16tnrs77N6wQYx2wmhOIX19EmDDor63Zq9LX8WA7FhqmD93gqBJLeOaxm1WfHeiyhKoS73wJ170Kj6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Account/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Account",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETdtocuenta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5211/api/Account/dto/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Account",
+						"dto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jose@test.com\",\r\n    \"pwd\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5211/api/Login/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5211",
+					"path": [
+						"api",
+						"Login",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

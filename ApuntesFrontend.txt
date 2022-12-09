@@ -1,0 +1,6 @@
+-- Instalamos angular material
+ng add @angular/material
+
+-- instalamos paquete para dar formato a las fechas
+npm install moment  --save
+npm install @angular/material-moment-adapter

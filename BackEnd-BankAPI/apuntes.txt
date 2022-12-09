@@ -1,0 +1,10 @@
+-- VERIFICAR SI TENEMOS INSTALADO EF
+dotnet tool install --global dotnet-ef
+
+-- VERIFICAR SI TENEMOS INSTALADO SCAFFOLD
+dotnet ef dbcontext scaffold "Server=DESKTOP-V3E5ICQ\MSSQLSERVERDEV;Database=Bank;Trusted_connection=true" Microsoft.EntityFrameworkCore.SqlServer --context-dir .\Data --output-dir .\Data\BankModels
+-- OTRA FORMA DE HACER ES IR A tools -> Nuget package Manager -> Package Manager Console
+Scaffold-DbContext "Server=DESKTOP-V3E5ICQ\MSSQLSERVERDEV; DataBase=Bank;Integrated Security=true" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Data\BankModels -ContextDir Data
+
+
+Scaffold-DbContext "Server=DESKTOP-V3E5ICQ\MSSQLSERVERDEV; DataBase=Bank;Integrated Security=true" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Data\BankModels -ContextDir Data -force
